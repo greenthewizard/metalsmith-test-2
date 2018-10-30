@@ -1,6 +1,6 @@
 ---
 title: "Hello, universe!"
-date: 2016-12-22
+date: 2016-10-29
 blurb: "Welcome to my test blog, friend!"
 ---
 

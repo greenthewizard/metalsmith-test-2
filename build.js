@@ -1,7 +1,6 @@
 const metalsmith = require('metalsmith');
 const markdown = require('metalsmith-markdown');
-const inplace = require('metalsmith-in-place');
-const handlebars = require('handlebars');
+const layouts = require('metalsmith-layouts');
 
 metalsmith(__dirname)
     .metadata({
@@ -13,9 +12,9 @@ metalsmith(__dirname)
     .source('./src')
     .destination('./build')
     .use(markdown())
-    .use(inplace({
+    .use(layouts({
         engine: 'handlebars',
-        default: 'article.html',
+        default: 'article.hbs',
         pattern: "**/*.html"
     }))
     .build(function (err) {
